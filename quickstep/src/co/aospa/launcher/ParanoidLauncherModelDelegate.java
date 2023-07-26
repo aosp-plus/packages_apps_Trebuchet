@@ -1,4 +1,4 @@
-package com.android.launcher3.model;
+package co.aospa.launcher;
 
 import android.app.smartspace.SmartspaceConfig;
 import android.app.smartspace.SmartspaceManager;
@@ -29,17 +29,17 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public class CustomQuickstepModelDelegate extends QuickstepModelDelegate
+public class ParanoidLauncherModelDelegate extends QuickstepModelDelegate
     implements SmartspaceSession.OnTargetsAvailableListener {
 
-    public static final String TAG = "CustomQuickstepModelDelegate";
+    public static final String TAG = "ParanoidLauncherModelDelegate";
 
     public final Context mContext;
     public final Deque mSmartspaceTargets = new LinkedList<List>();
 
     public SmartspaceSession mSmartspaceSession;
 
-    public CustomQuickstepModelDelegate(Context context) {
+    public ParanoidLauncherModelDelegate(Context context) {
         super(context);
         mContext = context;
     }
